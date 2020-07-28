@@ -1,3 +1,5 @@
 #!/bin/sh
 
-/usr/bin/invoke_app "$@" -C "start_jupyter -A -T @tool Hypoxia_simulator.ipynb" -t pc4tumorhypoxia \
+/usr/bin/invoke_app "$@" -C "start_jupyter -A -T @tool Hypoxia_simulator.ipynb" \
+    -t pc4tumorhypoxia \
+    -u anaconda3-5.1
