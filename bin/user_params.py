@@ -54,7 +54,7 @@ class UserTab(object):
         param_name4.style.button_color = 'tan'
 
         self.hypoxyprobe = Checkbox(
-          value=False,
+          value=True,
           style=style, layout=widget_layout)
 
         param_name5 = Button(description='sigma_Hp', disabled=True, layout=name_button_layout)
