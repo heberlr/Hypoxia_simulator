@@ -62,10 +62,8 @@ class MicroenvTab(object):
         row1 = [param_name1, self.oxygen_diffusion_coefficient, menv_units_button1]
         row2 = [param_name2, self.oxygen_decay_rate, menv_units_button2]
         row3 = [param_name3, self.oxygen_initial_condition, menv_units_button3]
-        row4 = [param_name4, self.oxygen_Dirichlet_boundary_condition, menv_units_button4]
-        #row4 = [param_name4, self.oxygen_Dirichlet_boundary_condition, menv_units_button4, self.oxygen_Dirichlet_boundary_condition_toggle]
-        row5 = []
-        #row5 = [self.calculate_gradient,]
+        row4 = [param_name4, self.oxygen_Dirichlet_boundary_condition, menv_units_button4, self.oxygen_Dirichlet_boundary_condition_toggle]
+        row5 = [self.calculate_gradient,]
         row6 = [self.track_internal,]
 
 

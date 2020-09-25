@@ -45,6 +45,21 @@ that will terminate (not pause) the simulation.
 
 <h2>&nbsp;</h2>
 
+<h2>Exploring this model</h2>
+
+<p>You can follow these suggestions to familiarize yourself with the model.</p>
+
+<p>1) Run this model using the default parameters.</p>
+
+<p>2) Change the fraction_rsp to 0.1. Note that most green cells (90%) will have less migration.</p>
+
+<p>3) Return the fraction_rsp to 0.5 and change bias_green_rsp to 1.0. Note that all green cells will have high migration, due 100% of green cells have a high bias migration.</p>
+
+<p>4) Keep the parameters defined in (3) and change the hypoxia_pers_time to 300 min. Thus, the green cells do not leave the hypoxic region, but produce a radial growth of the tumor.</p>
+
+<p>5) Now, you can enjoy yourself changing other parameters and creating new responses. &#128521; </p>
+
+
 <h2>Modeling description</h2>
 
 <p>The model developed and based on a new hypoxia target mapping system that was designed to report a fluorescent switch in low oxygen conditions. Normoxic cells express a red fluorescent protein (DsRed), and after exposure to hypoxia conditions, hypoxia-inducible factors (HIFs) drive a Cre-Loxp mechanism to induce a permanent change to express a green fluorescent protein (GFP) [3]. In this scenario, we show the response of the GFP+ cells to the migratory stimulus from hypoxia, with a focus on understanding the role of phenotypic transience or permanence on cancer invasion</p>
@@ -79,12 +94,12 @@ that will terminate (not pause) the simulation.
 
 <ul>
 	<li>Persistence time (&tau;), the average time that the cell maintains its current speed and direction;</li>
-	<li>Speed (&nu;), the speed of cellular migration in the absence of other forces;</li>
-	<li>Bias (&#966;), a &nbsp;value between 0 and 1 that represents the extent that cell trajectory mimics Brownian motion.</li>
+	<li>Speed (s), the speed of cellular migration in the absence of other forces;</li>
+	<li>Bias (b), a value between 0 and 1 that represents the extent that cell trajectory mimics Brownian motion.</li>
 </ul>
 
 <p style="text-align: center;"><a href="https://raw.githubusercontent.com/heberlr/Hypoxia_simulator/master/doc/Motility.png" target="_self"><img alt="" src="https://raw.githubusercontent.com/heberlr/Hypoxia_simulator/master/doc/Motility.png" style="width: 300px; height: 104px;" /></a></p>
 
-<p>in which &xi; represents the random unit vector and <span style="position: relative; left: 9px; bottom: 6px;">^</span>d unit vector with the direction of mobility. Thus, the velocity of the cell motility is given by <span style="position: relative; left: 9px; bottom: 6px;">^</span>d &#8727; &nu; with the duration of &tau;. To investigate the invasive behavior of GFP+ cells, we define a fraction of that cell (F<sub>G</sub>) that has a different mobility bias (&#966;<sup>&#8727;</sup>).</p>
+<p>in which &xi; represents the random unit vector and <span style="position: relative; left: 9px; bottom: 6px;">^</span>d unit vector with the direction of mobility. Thus, the velocity of the cell motility is given by <span style="position: relative; left: 9px; bottom: 6px;">^</span>d &#8727; s with the duration of &tau;. To investigate the invasive behavior of GFP+ cells, we define a fraction of that cell (F<sub>r</sub>) that has a different mobility bias (b<sup>&#8727;</sup>).</p>
 
 <p>&nbsp;</p>

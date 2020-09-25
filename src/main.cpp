@@ -163,10 +163,6 @@ int main( int argc, char* argv[] )
 	}
 	
 	// main loop 
-	
-	//std::cout << "Hypoxic threshold: " << parameters.doubles["hypoxic_threshold"].value << " " << parameters.doubles["hypoxic_threshold"].units << std::endl;
-	//return 0;
-	
 	try 
 	{	
 		while( PhysiCell_globals.current_time < PhysiCell_settings.max_time + 0.1*diffusion_dt )
@@ -212,12 +208,6 @@ int main( int argc, char* argv[] )
 			
 			PhysiCell_globals.current_time += diffusion_dt;
 		}
-		
-		/* if( PhysiCell_settings.enable_legacy_saves == true )
-		{			
-			log_output(PhysiCell_globals.current_time, PhysiCell_globals.full_output_index, microenvironment, report_file);
-			report_file.close();
-		} */
 	}
 	catch( const std::exception& e )
 	{ // reference to the base of a polymorphic object
